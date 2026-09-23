@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@keyframes kakumi-rise {
+	from {
+		opacity: 0;
+		transform: translateY(18px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes kakumi-drift {
+	0%,
+	100% {
+		transform: translate3d(0, 0, 0) scale(1);
+	}
+	50% {
+		transform: translate3d(-10px, 8px, 0) scale(1.03);
+	}
+}
+
+.kakumi-rise {
+	animation: kakumi-rise 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.kakumi-drift {
+	animation: kakumi-drift 12s ease-in-out infinite;
+}
+
+.kakumi-card {
+	animation: kakumi-rise 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.kakumi-card:nth-child(2) {
+	animation-delay: 80ms;
+}
+
+.kakumi-card:nth-child(3) {
+	animation-delay: 160ms;
+}
+
+.kakumi-card:nth-child(4) {
+	animation-delay: 240ms;
+}
+
+.kakumi-card:nth-child(5) {
+	animation-delay: 320ms;
+}
+
+.kakumi-card:nth-child(6) {
+	animation-delay: 400ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.kakumi-rise,
+	.kakumi-drift,
+	.kakumi-card {
+		animation: none;
+	}
+
+	::view-transition-old(.route-exit),
+	::view-transition-new(.route-enter) {
+		animation: none;
+	}
+}
+
+::view-transition-old(.route-exit) {
+	animation: 140ms ease-in both kakumi-fade-out;
+}
+
+::view-transition-new(.route-enter) {
+	animation: 220ms ease-out 100ms both kakumi-fade-in;
+}
+
+@keyframes kakumi-fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes kakumi-fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+

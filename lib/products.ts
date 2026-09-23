@@ -1,0 +1,20 @@
+import { Beef, ChefHat, Flame, Leaf, Soup } from "lucide-react";
+import type { ProductCardProps } from "@/components/ProductCard";
+
+export const mongolianProducts: ProductCardProps[] = [
+  { number: "02", mongolianName: "Халуун ногоотой гахай", englishName: "Spicy Pork Kakumi Roll", headline: "ХАЛУУН. ХҮЧТЭЙ. ЧАС ХИЙСЭН.", description: "Халуун ногооны хурц өнгө аяс, гахайн махны баялаг амтны төгс зохицол. Танд эрч хүч, огцом шинэ мэдрэмж шаардлагатай мөчид өөрийгөө сэргээх онцгой амт.", icon: Flame, accentClassName: "bg-[#EF233C]" },
+  { number: "01", mongolianName: "Бяслагтай тахиа", englishName: "Cheese Chicken Kakumi Roll", headline: "ЗӨӨЛӨН БЯСЛАГ. ШҮҮСЛЭГ ТАХИА.", description: "Бяслаг болон тахианы махны зөөлөн, баялаг зохицол. Ажлын дундуур өөртөө гаргах тайван мөчид тохирох, сэтгэлд дулаан мэдрэмж бэлэглэх онцгой амт.", icon: ChefHat, accentClassName: "bg-[#00A878]" },
+  { number: "03", mongolianName: "Терияки тахиа", englishName: "Teriyaki Chicken Kakumi Roll", headline: "ЧИХЭРЛЭГ, ДАВСЛАГ ТЭНЦВЭР.", description: "Дорнын уламжлалт терияки соус болон тахианы махны төгс зохицол. Амт бүрийн нарийн тэнцвэрийг мэдрүүлж, өдрийн хэмнэлд тань баялаг мэдрэмж нэмнэ.", icon: Soup, accentClassName: "bg-[#F4C430]" },
+  { number: "04", mongolianName: "Бяслагтай гахай", englishName: "Cheese Pork Kakumi Roll", headline: "БЯСЛАГ. ГАХАЙН МАХ. БАЯЛАГ АМТ.", description: "Зөөлөн бяслаг болон амтлаг гахайн махны төгс зохицол. Өдрийн ямар ч агшинд ханаж цадам, тааламжтай баялаг мэдрэмжийг бэлэглэнэ.", icon: Beef, accentClassName: "bg-[#F4C430]" },
+  { number: "05", mongolianName: "Мисо тахиа", englishName: "Miso Chicken Kakumi Roll", headline: "ГҮН. ЗӨӨЛӨН. ТААТАЙ АМТ.", description: "Япон уламжлалт мисоны гүн баялаг амт, зөөлөн тахианы махны таатай зохицол. Өдрийн хэмнэлдээ гүн, баялаг амтыг нэмэх сонголт.", icon: ChefHat, accentClassName: "bg-[#00A878]" },
+  { number: "06", mongolianName: "Мөөгтэй дүпү", englishName: "Mushroom Tofu Kakumi Roll", headline: "МӨӨГНИЙ ГҮН АМТ. ДҮПҮҮНИЙ ЗӨӨЛӨН МЭДРЭМЖ.", description: "Байгалийн баялаг амт, хөнгөн тэжээллэг чанарын зохицол. Ачаалалтай өдрийн дунд биед хөнгөн, сэтгэлд таатай тэнцвэртэй сонголт.", icon: Leaf, accentClassName: "bg-[#EF233C]" },
+];
+
+export const englishProducts: ProductCardProps[] = [
+  { number: "02", mongolianName: "Spicy Pork", englishName: "Spicy Pork Kakumi Roll", headline: "HOT. BOLD. CRISP.", description: "A perfect meeting of sharp chili heat and rich pork flavor. A bold refresh for the moment you need energy and a sudden new sensation.", icon: Flame, accentClassName: "bg-[#EF233C]" },
+  { number: "01", mongolianName: "Cheese Chicken", englishName: "Cheese Chicken Kakumi Roll", headline: "SOFT CHEESE. JUICY CHICKEN.", description: "A gentle, rich pairing of cheese and chicken. A warm flavor for a quiet moment in the middle of a busy day.", icon: ChefHat, accentClassName: "bg-[#00A878]" },
+  { number: "03", mongolianName: "Teriyaki Chicken", englishName: "Teriyaki Chicken Kakumi Roll", headline: "SWEET. SAVORY. BALANCED.", description: "Traditional teriyaki sauce and tender chicken in perfect balance. A rich choice that adds depth to your day.", icon: Soup, accentClassName: "bg-[#F4C430]" },
+  { number: "04", mongolianName: "Cheese Pork", englishName: "Cheese Pork Kakumi Roll", headline: "CHEESE. PORK. RICH FLAVOR.", description: "Soft cheese and savory pork in a satisfying pairing. A generous choice for any moment of the day.", icon: Beef, accentClassName: "bg-[#F4C430]" },
+  { number: "05", mongolianName: "Miso Chicken", englishName: "Miso Chicken Kakumi Roll", headline: "DEEP. SOFT. COMFORTING.", description: "The deep richness of traditional Japanese miso with tender chicken. Add a warm, full flavor to your day.", icon: ChefHat, accentClassName: "bg-[#00A878]" },
+  { number: "06", mongolianName: "Mushroom Tofu", englishName: "Mushroom Tofu Kakumi Roll", headline: "DEEP MUSHROOM. SOFT TOFU.", description: "Natural richness and light nourishment in balance. A gentle choice for a busy day and a calmer moment.", icon: Leaf, accentClassName: "bg-[#EF233C]" },
+];
