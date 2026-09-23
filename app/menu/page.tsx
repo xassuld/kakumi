@@ -40,7 +40,7 @@ export default function MenuPage() {
           <div className="mt-10 flex flex-col justify-between gap-6 border-b border-[#24221F]/20 pb-8 sm:flex-row sm:items-end">
             <div>
               <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#EF233C]">Kakumi menu · 06</p>
-              <h1 className="mt-3 text-5xl font-black leading-[0.95] tracking-[-0.05em] sm:text-7xl">{isEnglish ? <>6 <span className="text-[#EF233C]">FLAVORS.</span><br />6 <span className="text-[#00A878]">FEELINGS.</span></> : <>6 <span className="text-[#EF233C]">ӨӨР АМТ.</span><br />6 <span className="text-[#00A878]">ӨӨР МЭДРЭМЖ.</span></>}</h1>
+              <h1 className="mt-3 text-4xl font-black leading-[0.95] tracking-[-0.06em] sm:text-7xl">{isEnglish ? <><span className="block whitespace-nowrap">6 <span className="text-[#EF233C]">FLAVORS.</span></span><span className="block whitespace-nowrap">6 <span className="text-[#00A878]">FEELINGS.</span></span></> : <><span className="block whitespace-nowrap">6 <span className="text-[#EF233C]">ӨӨР АМТ.</span></span><span className="block whitespace-nowrap">6 <span className="text-[#00A878]">ӨӨР МЭДРЭМЖ.</span></span></>}</h1>
             </div>
             <p className="max-w-sm text-base leading-7 text-[#24221F]/65">{isEnglish ? "Choose the feeling that fits your day. Every Kakumi Roll is made to be enjoyed in the moment." : "Өнөөдрийн тань мэдрэмжид тохирох амтыг сонгоорой. Kakumi Roll бүр тухайн мөчийг илүү онцгой болгохоор бүтээгдсэн."}</p>
           </div>

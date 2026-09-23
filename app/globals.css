@@ -29,6 +29,86 @@
 	animation: kakumi-drift 12s ease-in-out infinite;
 }
 
+.kakumi-menu-panel {
+	will-change: max-height, opacity, transform;
+}
+
+.kakumi-menu-panel-open {
+	animation: kakumi-menu-drop 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.kakumi-menu-panel-closing {
+	animation: kakumi-menu-close 420ms cubic-bezier(0.4, 0, 0.6, 1) both;
+}
+
+.kakumi-menu-link {
+	animation: kakumi-menu-link-drop 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.kakumi-menu-link:nth-child(2) {
+	animation-delay: 50ms;
+}
+
+.kakumi-menu-link:nth-child(3) {
+	animation-delay: 100ms;
+}
+
+.kakumi-menu-link:nth-child(4) {
+	animation-delay: 150ms;
+}
+
+@keyframes kakumi-menu-drop {
+	from {
+		max-height: 0;
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		max-height: 300px;
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes kakumi-menu-link-drop {
+	from {
+		opacity: 0;
+		transform: translateY(-12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes kakumi-menu-close {
+	from {
+		max-height: 300px;
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		max-height: 0;
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+}
+
+.kakumi-language-swap {
+	animation: kakumi-language-swap 280ms ease-out both;
+}
+
+@keyframes kakumi-language-swap {
+	from {
+		opacity: 0.35;
+		transform: translateY(6px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 .kakumi-card {
 	animation: kakumi-rise 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }

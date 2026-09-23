@@ -41,8 +41,8 @@ export default function Home() {
           <p className="mt-7 max-w-md text-base leading-7 text-[#24221F]/65 sm:text-lg">{isEnglish ? "Enter your ZIP code or address and we will help you find the easiest way to get fresh Kakumi rolls." : "Захиалга хүргүүлэхийн тулд зип код эсвэл хаягаа оруулна уу. Бид Какүмигийн шинэхэн ороомгийг танд хүргэхэд тусална."}</p>
           <form className="mt-8 flex max-w-lg flex-col gap-3 sm:flex-row" onSubmit={(event) => event.preventDefault()}>
             <label className="sr-only" htmlFor="delivery-address">{isEnglish ? "ZIP code or address" : "Зип код эсвэл хаяг"}</label>
-            <input id="delivery-address" name="deliveryAddress" className="h-14 min-w-0 flex-1 border border-[#24221F]/20 bg-[#FFF9F0] px-4 text-sm outline-none transition-colors placeholder:text-[#24221F]/40 focus:border-[#00A878]" placeholder={isEnglish ? "ZIP code or address" : "Зип код эсвэл хаяг"} />
-            <button type="submit" className="h-14 bg-[#EF233C] px-6 text-sm font-bold text-[#F3EEE5] transition-colors hover:bg-[#00A878]">{isEnglish ? "Check delivery" : "Хүргэлт шалгах"}</button>
+            <input id="delivery-address" name="deliveryAddress" className="h-16 min-h-[64px] min-w-0 w-full flex-1 appearance-none border border-[#24221F]/20 bg-[#FFF9F0] px-4 text-sm outline-none transition-colors placeholder:text-[#24221F]/40 focus:border-[#00A878] rounded-3xl sm:h-14 sm:min-h-0 sm:w-auto" placeholder={isEnglish ? "ZIP code or address" : "Зип код эсвэл хаяг"} />
+            <button type="submit" className="h-16 bg-[#EF233C] px-6 text-sm font-bold text-[#F3EEE5] transition-colors hover:bg-[#00A878] rounded-3xl sm:h-14">{isEnglish ? "Check delivery" : "Хүргэлт шалгах"}</button>
           </form>
         </div>
         <div className="relative flex min-h-[300px] items-center justify-center overflow-hidden bg-[#F4C430] p-8 sm:min-h-[360px] lg:min-h-0">

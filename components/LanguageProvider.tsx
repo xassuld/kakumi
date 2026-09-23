@@ -13,6 +13,7 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>("mn");
+  const [isChangingLanguage, setIsChangingLanguage] = useState(false);
 
   useEffect(() => {
     document.documentElement.lang = language;
@@ -27,10 +28,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   function setLanguage(language: Language) {
     setLanguageState(language);
+    setIsChangingLanguage(true);
     window.localStorage.setItem("kakumi-language", language);
+    window.setTimeout(() => setIsChangingLanguage(false), 280);
   }
 
-  return <LanguageContext.Provider value={{ language, setLanguage }}>{children}</LanguageContext.Provider>;
+  return <LanguageContext.Provider value={{ language, setLanguage }}><div className={isChangingLanguage ? "kakumi-language-swap" : ""}>{children}</div></LanguageContext.Provider>;
 }
 
 export function useLanguage() {
